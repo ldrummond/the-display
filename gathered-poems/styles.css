@@ -1,0 +1,70 @@
+html {
+  -webkit-font-smoothing: none;
+  background: rgb(209, 184, 216);
+}
+
+body {
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(rgb(71, 36, 56),rgb(196, 106, 212)); */
+  background: rgb(182, 117, 193);
+  filter: blur(5vw);
+  pointer-events: none;
+  z-index: -1;
+}
+
+#inner {
+  padding-top: 30%;
+  padding-bottom: 50%;
+  height: auto;
+  z-index: 1;
+  width: 100vw;
+}
+
+h1 {
+  font-size: 1.5vw;
+  font-style: italic;
+  margin-left: 3vw;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 100;
+}
+
+p {
+  font-size: 1.5vw;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 100;
+  margin-left: 8vw;
+  width: calc(50%);
+  box-sizing: border-box;
+  /* This must match */
+  margin-bottom: 1.6em; 
+}
+
+p span::selection {
+  color: blue;
+  background-color: black;
+}
+
+p span {
+  display: block;
+  line-height: 0;
+  /* This must match */
+  margin-bottom: 1.6em; 
+}
+
+#canvas {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  image-rendering: pixelated;
+}
